@@ -3,21 +3,21 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>at.or.reder</groupId>
   <artifactId>photosheet</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>3.8.0</version>
         <configuration>
           <showDeprecation>true</showDeprecation>
         </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.0.2</version>
+        <version>3.1.1</version>
         <executions>
           <execution>
             <phase>install</phase>
@@ -32,14 +32,14 @@
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
+        <version>3.1.1</version>
         <configuration>
           <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.reder.photosheet.Main</mainClass>
+              <mainClass>at.or.reder.photosheet.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -50,7 +50,7 @@
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports</artifactId>
-      <version>6.4.1</version>
+      <version>6.8.0</version>
     </dependency>
     <dependency>
       <groupId>commons-cli</groupId>
@@ -60,7 +60,7 @@
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports-fonts</artifactId>
-      <version>6.0.0</version>
+      <version>6.8.0</version>
     </dependency>
   </dependencies>
   <properties>
